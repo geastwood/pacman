@@ -1,0 +1,19 @@
+{
+  "name": "pacman",
+  "version": "0.1.0",
+  "description": "Pacman",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [
+    "pacman"
+  ],
+  "author": "Fei Liu <liu.feiwood@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-jasmine": "~0.6.3",
+    "grunt-contrib-requirejs": "~0.4.4",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-template-jasmine-requirejs": "^0.2.0"
+  }
+}
