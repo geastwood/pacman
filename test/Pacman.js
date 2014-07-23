@@ -73,6 +73,11 @@ define(function(require) {
                 p.moveLeft();
                 expect(p.x).toBe(20);
                 expect(p.y).toBe(20);
+                p.setState('active');
+                p.moveUp();
+                p.moveLeft();
+                expect(p.x).toBe(19);
+                expect(p.y).toBe(21);
             });
         });
         describe('api for setting Status', function() {
