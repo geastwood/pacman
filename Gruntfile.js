@@ -1,5 +1,11 @@
 "use strict";
 
+var template = require('grunt-template-jasmine-requirejs');
+var templateOptions = {
+    requireConfig: {
+        baseUrl: 'src'
+    }
+};
 module.exports = function(grunt) {
     grunt.initConfig({
         jasmine: {
@@ -7,12 +13,24 @@ module.exports = function(grunt) {
                 src: ['src/Pacman.js'],
                 options: {
                     specs: ['test/Pacman.js'],
-                    template: require('grunt-template-jasmine-requirejs'),
-                    templateOptions: {
-                        requireConfig: {
-                            baseUrl: 'src'
-                        }
-                    }
+                    template: template,
+                    templateOptions: templateOptions
+                }
+            },
+            userManager: {
+                src: ['src/userManager.js'],
+                options: {
+                    specs: ['test/userManager.js'],
+                    template: template,
+                    templateOptions: templateOptions
+                }
+            },
+            util: {
+                src: ['src/util.js'],
+                options: {
+                    specs: ['test/util.js'],
+                    template: template,
+                    templateOptions: templateOptions
                 }
             }
         },
