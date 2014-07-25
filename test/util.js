@@ -1,7 +1,12 @@
 define(function(require) {
-    describe('util', function() {
-        it('should be tested', function() {
-            expect(true).toBe(true);
+    var util = require('util');
+    describe('util functions', function() {
+        it('each', function() {
+            var rst = [];
+            util.each({name: 'foo', type: 'object'}, function(v) {
+                rst.push(v);
+            });
+            expect(rst).toEqual(['foo', 'object']);
         });
     });
 });
