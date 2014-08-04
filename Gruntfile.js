@@ -9,10 +9,18 @@ var templateOptions = {
 module.exports = function(grunt) {
     grunt.initConfig({
         jasmine: {
+            character: {
+                src: ['src/Character.js'],
+                options: {
+                    specs: ['test/Character.spec.js'],
+                    template: template,
+                    templateOptions: templateOptions
+                }
+            },
             pacman: {
                 src: ['src/Pacman.js'],
                 options: {
-                    specs: ['test/Pacman.js'],
+                    specs: ['test/Pacman.spec.js'],
                     template: template,
                     templateOptions: templateOptions
                 }
@@ -20,15 +28,7 @@ module.exports = function(grunt) {
             userManager: {
                 src: ['src/userManager.js'],
                 options: {
-                    specs: ['test/userManager.js'],
-                    template: template,
-                    templateOptions: templateOptions
-                }
-            },
-            util: {
-                src: ['src/util.js'],
-                options: {
-                    specs: ['test/util.js'],
+                    specs: ['test/userManager.spec.js'],
                     template: template,
                     templateOptions: templateOptions
                 }

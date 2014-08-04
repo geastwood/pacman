@@ -1,8 +1,8 @@
-define(['Pacman'], function(Pacman) {
+define(['Character'], function(Character) {
     var collections = [];
     return {
         create: function(name) {
-            var p = new Pacman();
+            var p = new Character();
 
             p.name = name || 'Pac';
 

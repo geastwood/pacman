@@ -1,13 +1,13 @@
 define(function(require) {
 
-    describe('Pacman', function() {
+    describe('Character', function() {
 
-        var Pacman  = require('Pacman');
-        var p = new Pacman();
+        var Character  = require('Character');
+        var p = new Character();
 
         describe('basic', function() {
             it('should be a constructor function', function() {
-                expect(typeof Pacman).toBe('function');
+                expect(typeof Character).toBe('function');
             });
         });
         describe('move', function() {
@@ -33,7 +33,7 @@ define(function(require) {
         describe('move correctly', function() {
             var p;
             beforeEach(function() {
-                p = new Pacman(20, 20);
+                p = new Character(20, 20);
                 p.setState('active');
             });
             it('up correctly', function() {
@@ -66,7 +66,7 @@ define(function(require) {
         describe('move with state', function() {
             var p;
             beforeEach(function() {
-                p = new Pacman(20, 20);
+                p = new Character(20, 20);
             });
             it('should not move without being alive', function() {
                 p.moveUp();
@@ -83,7 +83,7 @@ define(function(require) {
         describe('api for setting Status', function() {
             var p;
             beforeEach(function() {
-                p = new Pacman(20, 20);
+                p = new Character(20, 20);
             });
             it('default to inactive', function() {
                 expect(p.state).toBe('inactive');
